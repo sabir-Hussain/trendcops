@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import {
   User,
   Settings,
@@ -65,4 +64,3 @@ export function UserProfileMenu() {
     </DropdownMenu>
   );
 }
-

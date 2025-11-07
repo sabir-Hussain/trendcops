@@ -1,15 +1,15 @@
 "use client";
 
-import * as React from "react";
+import { useState, useEffect } from "react";
 import { Moon, Sun, Bell, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { UserProfileMenu } from "./user-profile-menu";
 import { MobileSidebar } from "./sidebar";
 
 function ThemeToggle() {
-  const [theme, setTheme] = React.useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
-  React.useEffect(() => {
+  useEffect(() => {
     const root = document.documentElement;
     const isDark = root.classList.contains("dark");
     setTheme(isDark ? "dark" : "light");

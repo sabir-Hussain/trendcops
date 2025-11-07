@@ -1,10 +1,10 @@
-import * as React from "react";
+import { forwardRef, type ElementRef, type HTMLAttributes } from "react";
 
 import { cn } from "@/lib/utils";
 
-const Separator = React.forwardRef<
-  React.ElementRef<"div">,
-  React.HTMLAttributes<HTMLDivElement> & {
+const Separator = forwardRef<
+  ElementRef<"div">,
+  HTMLAttributes<HTMLDivElement> & {
     orientation?: "horizontal" | "vertical";
     decorative?: boolean;
   }

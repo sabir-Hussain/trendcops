@@ -1,7 +1,7 @@
 "use client";
 
 import { signIn } from "next-auth/react";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,7 +19,7 @@ export default function RegisterPage() {
     return emailRegex.test(emailValue);
   }
 
-  async function handleEmailSignUp(e: React.FormEvent) {
+  async function handleEmailSignUp(e: FormEvent) {
     e.preventDefault();
     setEmailError("");
 
